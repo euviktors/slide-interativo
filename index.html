@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+    <title>TV Interativa</title>
+</head>
+<style>
+    :root {
+        --text-color: rgb(0, 0, 0);
+        --bg-cor: rgb(255, 255, 255);
+        --stroke-color: rgba(0, 0, 0, 0.5);
+        --vermelho-compos: #c8102e;
+        --icon-color: #c8102e;
+        --text-font: "Inter", sans-serif;
+    }
+
+    .body {
+        font-family: var(--text-font);
+        color: var(--text-color);
+    }
+
+    .corpo {
+        width: 50%;
+    }
+
+    .slider {
+        width: 800px;
+        height: 452px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background: #242424; */
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .slider img {
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        animation: fade 1s;
+
+    }
+
+    .slider .seta {
+
+        z-index: 10;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: auto;
+        width: auto;
+        height: 1.5rem;
+        font-size: 2.5em;
+        color: cornsilk;
+        opacity: 0.5;
+        transition: opacity 1s;
+
+    }
+
+    .slider .seta:hover {
+
+        cursor: pointer;
+        opacity: 1;
+
+    }
+
+    .slider .arrow-left {
+
+        left: 2%;
+
+    }
+
+    .slider .arrow-right {
+
+        right: 2%;
+
+    }
+
+    .slider .paginacao {
+
+        position: absolute;
+        margin: auto;
+        top: auto;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        width: 7rem;
+        height: auto;
+        z-index: 5;
+
+    }
+
+    .slider .paginacao .botao {
+
+        width: auto;
+        height: auto;
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
+        color: #fff;
+
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0.1;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    #compos {
+        text-align: center;
+        padding: 24px;
+    }
+
+    #compos img {
+        max-width: 100%;
+        /* A imagem terá no máximo 100% da largura do container pai */
+        height: auto;
+        /* A altura será ajustada automaticamente para manter a proporção */
+    }
+
+    #compos p {
+        font-weight: 500;
+        line-height: 24px;
+        margin-top: 8px;
+    }
+
+
+    #data-hora {
+        text-align: center;
+        /* padding: 24px; */
+        /* margin-left: 954px; */
+        /* width: 228px; */
+        /*border: 1px solid red;*/
+        margin-top: 5px;
+
+    }
+
+
+    #horario {
+        /* text-align: center; */
+        margin-left: 0;
+        font-size: 35px;
+        font-family: var(--text-font);
+
+    }
+
+    #dia {
+        margin-left: 5px;
+        font-size: 17px;
+        font-family: var(--text-font);
+    }
+
+
+    #marketing {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 518px;
+        font-size: 17px;
+        font-family: var(--text-font);
+    }
+
+    #qr-code {
+        display: flex;
+        position: absolute;
+        /* margin-top: -715px; */
+        height: 167px;
+        width: auto;
+        top: 304px;
+        left: 1075px;
+    }
+
+    #qr-texto {
+        display: flex;
+        position: absolute;
+        top: 140px;
+        font-weight: 600;
+        left: 415px;
+        text-align: center;
+        font-size: 16px;
+
+    }
+
+    #marketing ion-icon {
+        color: var(--icon-color);
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div id="compos">
+            <img src="./public/LOGO-COMPOS.svg" alt="Foto do perfil,Imagem não suportada pelo seu navegador" />
+            <div id="data-hora">
+                <div id="horario"></div>
+                <div id="dia"></div>
+            </div>
+        </div>
+    </div>
+    <section class="corpo">
+        <section class="slider">
+
+            <div class="seta arrow-left"><i class="fas fa-chevron-circle-left"></i></div>
+            <!--<video class="img-desktop" controls>
+                <source src="./public/aniversariantes/Novembro/Aniversário_Compos_Jairo.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>-->
+            <!--
+            <img src="./public/qrcode/Qr_Code_Enquente.jpg" alt="slide-1.jpg">-->
+            <!-- <img src="./public/aniversariantes/Novembro/Aniversário_Compos_Jairo_111.jpg" alt="slide-2.jpg">
+            <img src="./public/aniversariantes/Novembro/Aniversário_Compos_Jônathas_111.jpg" alt="slide-3.jpg"> 
+
+
+            <img src="./public/aniversariantes/Dezembro/Yan_HBD.jpg" alt="slide-1.jpg">
+            <img src="./public/aniversariantes/Dezembro/Vitor_HBD.jpg" alt="slide-2.jpg">
+            <img src="./public/aniversariantes/Dezembro/André_HBD.jpg" alt="slide-3.jpg">
+            <img src="./public/aniversariantes/Dezembro/Gabriel_HBD.jpg" alt="slide-4.jpg">
+            <img src="./public/natal/Aviso_Natal_Compos.jpg" alt="slide-5.jpg">-->
+
+
+
+
+
+           <img src="./public/Aviso_EPI.jpg" alt="slide-3.jpg">
+            <img src="./public/Fofoca.png" alt="slide-4.jpg">
+            <img src="./public/Reduza barulhos_.png" alt="slide-5.jpg">
+            <img src="./public/Resolva_Conflitos.png" alt="slide-6.jpg">
+            <img src="./public/Respeito.png" alt="slide-7.jpg">
+            <img src="./public/salaconvivencia.jpg" alt="slide-8.jpg">
+            <img src="./public/sobrecopa.jpg" alt="slide-9.jpg">
+            <img src="./public/Trabalhar_Em_Equipe.png" alt="slide-10.jpg">
+
+            <div class="seta arrow-right"><i class="fas fa-chevron-circle-right"></i></div>
+
+            <div class="paginacao">
+
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+                <div class="botao"> <i class="far fa-circle"></i> </div>
+            </div>
+
+        </section><!--slider-->
+    </section>
+
+    <div id="marketing">
+        <p> Feito com <ion-icon name="heart"></ion-icon> pela Equipe de Marketing.</p>
+    </div>
+    <!---->
+    <!--<div id="qr-code">
+        <img src="./public/qrcode/frame.png" alt="foto do qr code">
+    </div>
+    <div id="qr-texto">
+        <p>Participe do questionário escaneando o QR Code com seu celular.</p>
+    </div>-->
+
+    <script>
+
+        const imgs = document.querySelectorAll(".slider img");
+        const dots = document.querySelectorAll(".botao i");
+        const leftArrow = document.querySelector(".arrow-left");
+        const rightArrow = document.querySelector(".arrow-right");
+
+        let currentIndex = 0;
+        let time = 15000; //Tempo padrão para apresentação de slides automática
+
+        const defClass = (startPos, index) => {
+            for (let i = startPos; i < imgs.length; i++) {
+                imgs[i].style.display = "none";
+                dots[i].classList.remove("fa-dot-circle");
+                dots[i].classList.add("fa-circle");
+            }
+            imgs[index].style.display = "block";
+            dots[index].classList.add("fa-dot-circle");
+        };
+
+        defClass(1, 0);
+
+        leftArrow.addEventListener("click", function () {
+            currentIndex <= 0 ? currentIndex = imgs.length - 1 : currentIndex--;
+            defClass(0, currentIndex);
+        });
+
+        rightArrow.addEventListener("click", function () {
+            currentIndex >= imgs.length - 1 ? currentIndex = 0 : currentIndex++;
+            defClass(0, currentIndex);
+        });
+
+        const startAutoSlide = () => {
+            setInterval(() => {
+                currentIndex >= imgs.length - 1 ? currentIndex = 0 : currentIndex++;
+                defClass(0, currentIndex);
+            }, time);
+        };
+
+        startAutoSlide(); //Inicia o slideshow
+
+    </script>
+
+    <script src="slide.js"></script>
+    <!--Instalação do ion icons-------------------------------->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js">
+    </script>
+    <script nomodule src="https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js">
+    </script>
+    <!--Fim da Instalação do ion icons-->
+
+    <script>
+        function atualizarHorario() {
+            const agora = new Date();
+            const options = { hour: '2-digit', minute: '2-digit' };
+            const formatoHorario = agora.toLocaleTimeString('pt-BR', options);
+            document.getElementById('horario').textContent = formatoHorario;
+        }
+
+        // Atualiza o horário a cada segundo
+        setInterval(atualizarHorario, 1000);
+
+        // Chama a função para exibir o horário atual imediatamente
+        atualizarHorario();
+    </script>
+
+    <script>
+        function atualizarDia() {
+            const agora = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const formatoDia = agora.toLocaleDateString('pt-BR', options);
+            document.getElementById('dia').textContent = formatoDia;
+        }
+
+        // Atualiza o dia a cada segundo (opcionalmente)
+        setInterval(atualizarDia, 1000);
+
+        // Chama a função para exibir o dia atual imediatamente
+        atualizarDia();
+    </script>
+
+    <script>
+        // Função para recarregar a página
+        function recarregarPagina() {
+            location.reload();
+        }
+
+        // Configura o intervalo para recarregar a página a cada 165 segundos
+        setInterval(recarregarPagina, 165000);
+
+    </script>
+</body>
+
+</html>

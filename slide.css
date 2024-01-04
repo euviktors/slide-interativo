@@ -1,0 +1,200 @@
+* {
+    /*margin: 0;*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------------------------------------------*/
+/*Definções raizes*/
+:root {
+    --text-color: rgb(0, 0, 0);
+    --bg-cor: rgb(255, 255, 255);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --vermelho-compos: #c8102e;
+    --icon-color: #c8102e;
+}
+
+body {
+    /* background: var(--bg-cor) no-repeat top center/cover;*/
+    /*vai puxar as informações do root*/
+    background: var(--bg-cor);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    height: 100vh;
+}
+
+body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+
+}
+
+/*--------------------------------------------*/
+
+.header {
+    width: auto;
+    /* border: 1px solid red;*/
+    padding: 15px;
+}
+
+
+#compos {
+    text-align: center;
+    padding: 24px;
+}
+
+#compos img {
+    max-width: 100%;
+    /* A imagem terá no máximo 100% da largura do container pai */
+    height: auto;
+    /* A altura será ajustada automaticamente para manter a proporção */
+}
+
+#compos p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+
+
+section.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+    /*Esconder a rolagem do site*/
+}
+
+.slider-content {
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slider-content input {
+    display: none;
+    /*esconder os inputs*/
+}
+
+.slide-box {
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slide-box img {
+    width: 60%;
+    border-radius: 11px;
+}
+
+.nav-manual,
+.nav-auto {
+    /*mexendo nos bullets*/
+    position: absolute;
+    width: 100%;
+    margin-top: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-manual .manual-btn,
+.nav-auto div {
+    border: 1px solid var(--vermelho-compos);
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    /*quando passar o mouse por cima apareça o click*/
+    transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child),
+.nav-auto div:not(:last-child) {
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover {
+    background-color: var(--vermelho-compos);
+}
+
+/*------------------------------------------------------*/
+#radio1:checked~.nav-auto .auto-btn1 {
+    background-color: var(--vermelho-compos);
+}
+
+#radio2:checked~.nav-auto .auto-btn2 {
+    background-color: var(--vermelho-compos);
+}
+
+#radio3:checked~.nav-auto .auto-btn3 {
+    background-color: var(--vermelho-compos);
+}
+
+#radio4:checked~.nav-auto .auto-btn4 {
+    background-color: var(--vermelho-compos);
+}
+
+#radio5:checked~.nav-auto .auto-btn5 {
+    background-color: var(--vermelho-compos);
+}
+
+#radio1:checked~.primeiro {
+    margin-left: 0%;
+}
+
+#radio2:checked~.primeiro {
+    margin-left: -25%;
+}
+
+#radio3:checked~.primeiro {
+    margin-left: -50%;
+}
+
+#radio4:checked~.primeiro {
+    margin-left: -75%;
+}
+
+#radio5:checked~.primeiro {
+    margin-left: -100%;
+}
+
+/*------------------------------------------------------*/
+
+#data-hora {
+    text-align: center;
+    /* padding: 24px; */
+    /* margin-left: 954px; */
+    /* width: 228px; */
+    /*border: 1px solid red;*/
+    margin-top: 5px;
+
+}
+
+
+#horario {
+    /* text-align: center; */
+    margin-left: 0;
+    font-size: 35px;
+
+}
+
+#dia {
+    margin-left: 5px;
+    font-size: 17px;
+}
+
+
+#marketing {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 71px;
+    font-size: 17px;
+}
+
+#marketing ion-icon {
+    color: var(--icon-color);
+}
